@@ -1,0 +1,184 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+	position: relative;
+    background-color:BROWN;
+    
+    text-align: center;
+    font-size: 30px;
+    -webkit-text-stroke: 1px red;
+    color: yellow; -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+@keyframes mymove {50% {color: #08F9DF;}50%{background-color:#333;}50% {text-shadow: 10px 10px 15px white;}}
+
+#grad1{
+    height: 200px;
+    background-image:url(a.jpg);
+   -webkit-text-stroke: 1px RED;
+   color: YELLOW;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+   }
+   #grad2{display:inline-table;
+   float:right;
+   -webkit-text-stroke: .5px RED;
+    color: YELLOW;
+      text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+   }
+   .btn {float:left;
+  background-color: brown;
+  border: border-box;
+  color: white;
+  padding: 1px 35px;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: green;
+  color: black;
+}
+
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 30%;
+    height: 300px; /* only for demonstration, should be removed */
+    background: #ccc;
+   
+}
+aside{
+    float: right;
+    width: 30%;
+    height: 300px; /* only for demonstration, should be removed */
+    background: #ccc;
+    
+}
+
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+   display:inline-table;
+    width: 40%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+}
+article ul {
+    list-style-type: none;
+    padding: 0;
+}
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 35px;
+    }
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article,aside {
+        width: 100%;
+        height: auto;
+    }
+}
+/*flip box controls*/
+
+.flip-box {
+  background-color: transparent;
+  height:200px ;
+  perspective: 1000px;
+}
+
+.flip-box-inner {animation: mymove6 10s 5; 
+              margin:0px;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              transition: transform 0.8s;
+              transform-style: preserve-3d;
+                }
+
+.flip-box:hover .flip-box-inner {transform: rotateY(180deg);} 
+.flip-box1:hover .flip-box-inner1 {transform: rotateY(180deg);} 
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility:hidden;
+}
+
+
+.flip-box-back {
+ 
+  transform: rotateY(180deg);
+}
+
+
+.flip-box1 {
+  background-color: transparent;
+  height:150px ;
+  perspective: 1000px;
+}
+
+.flip-box-inner1 { animation: mymove6 10s 5; 
+              margin:0px;
+              width: 100%;
+ height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+.flip-box-front1, .flip-box-back1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility:hidden;
+}
+
+
+.flip-box-back1 {
+ 
+  transform: rotateY(180deg);
+}
+@keyframes mymove6 {100% {transform: rotateY(360deg);}}
+
+
